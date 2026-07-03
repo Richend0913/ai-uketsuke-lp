@@ -29,7 +29,7 @@ body{font-family:var(--font-body);background:var(--c-bg);color:var(--c-ink);font
 @media(min-width:768px){body{padding-block-end:0}}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
-h1,h2,h3{font-family:var(--font-display);font-weight:700;line-height:1.45;letter-spacing:.02em;font-feature-settings:"palt";text-wrap:balance}
+h1,h2,h3{font-family:var(--font-display);font-weight:700;line-height:1.4;letter-spacing:.02em;font-feature-settings:"palt";text-wrap:balance;overflow-wrap:normal;word-break:normal}
 h2{font-size:clamp(22px,4.5vw,31px);margin-block-end:var(--sp-3)}
 h3{font-size:clamp(17px,3vw,20px);margin-block-end:var(--sp-1)}
 .ph{display:inline-block}
@@ -37,7 +37,8 @@ p{max-width:var(--w-text)}
 .container{max-width:var(--w-content);margin-inline:auto;padding-inline:20px}
 section{padding-block:var(--sp-8)}
 @media(min-width:768px){section{padding-block:var(--sp-12)}}
-.eyebrow{color:var(--c-accent);font-size:13px;letter-spacing:.16em;font-weight:700;display:block;margin-block-end:var(--sp-1)}
+.eyebrow{color:var(--c-accent);font-size:12px;letter-spacing:.2em;font-weight:700;display:inline-flex;align-items:center;gap:10px;margin-block-end:var(--sp-2)}
+.eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.7}
 .lead{font-size:clamp(16px,2.4vw,18px);color:var(--c-ink-soft);max-width:var(--w-text)}
 /* header */
 .hdr{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--c-bg) 90%,transparent);backdrop-filter:blur(8px);border-block-end:1px solid var(--c-line)}
@@ -47,10 +48,11 @@ section{padding-block:var(--sp-8)}
 .hdr .cta{background:var(--c-accent);color:#fff;text-decoration:none;padding:9px 16px;border-radius:6px;font-size:14px;font-weight:700}
 /* hero */
 .hero{background:linear-gradient(160deg,#123f37,#0b2b26);color:#fff;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;inset:0;opacity:.5;background:repeating-linear-gradient(125deg,transparent 0 30px,rgba(255,255,255,.03) 30px 31px)}
+.hero::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 80% 0%,rgba(127,212,191,.16),transparent 60%)}
 .hero .container{position:relative;z-index:1;padding-block:var(--sp-12) var(--sp-8)}
 .hero .eyebrow{color:#7fd4bf}
-.hero h1{font-size:clamp(28px,6.4vw,46px);line-height:1.5;font-weight:700}
+.hero h1{font-size:clamp(29px,6.8vw,50px);line-height:1.3;font-weight:700}
+.hero h1 .hl{background:linear-gradient(transparent 62%,rgba(127,212,191,.26) 62%);padding-inline:.05em}
 .hero .sub{margin-block-start:var(--sp-3);font-size:clamp(15px,2.4vw,18px);color:#dcebe6;max-width:32em}
 .hero .btns{display:flex;gap:12px;flex-wrap:wrap;margin-block-start:var(--sp-4)}
 .btn{display:inline-flex;align-items:center;justify-content:center;min-height:50px;padding:13px 28px;border-radius:var(--radius);font-weight:700;font-size:16px;text-decoration:none;border:1px solid transparent;cursor:pointer}
@@ -123,6 +125,7 @@ section{padding-block:var(--sp-8)}
       <a class="btn btn-ghost" href="#price">料金を見る</a>
     </div>
     <p class="note">初期0円のモニター枠あり ／ いつでも解約可・違約金なし ／ ドメインはお店の名義</p>
+    <p class="note" style="margin-block-start:6px;color:#9fc4bb">運営：山口県岩国市の NEXT GROWTH ／ BURNING BROS.。実際に事業（軽貨物運送）を営みながら、AIで自分たちの現場を軽くしてきた当事者がつくります。</p>
   </div>
 </section>
 
@@ -143,7 +146,7 @@ section{padding-block:var(--sp-8)}
     <span class="eyebrow">仕組み</span>
     <h2><span class="ph">お店の「顔」と「受付」を、</span><span class="ph">まとめて用意します。</span></h2>
     <div class="steps">
-      <div class="step reveal"><h3>スマホで見やすいホームページ</h3><p>メニュー・料金・アクセス・予約導線を、制作会社品質で。写真はお店のものに差し替えます。</p></div>
+      <div class="step reveal"><h3>スマホで見やすいホームページ</h3><p>メニュー・料金・アクセス・予約導線まで、スマホ表示を丁寧に作り込みます。写真はお店のものに差し替えます。</p></div>
       <div class="step reveal"><h3>右下にAI受付</h3><p>営業時間・料金・アクセスなどの定型質問に即答。分からないことは正直に「店主に確認します」。</p></div>
       <div class="step reveal"><h3>予約希望はあなたに通知</h3><p>お客様の希望日時・連絡先をAIが伺い、あなたのスマホ（LINE/メール）に届きます。確定はあなたが。</p></div>
       <div class="step reveal"><h3>毎月レポート</h3><p>「今月AIが◯件の問い合わせを拾い、◯件の予約希望を獲得」を数字で。運用はこちらが代行。</p></div>
@@ -170,7 +173,7 @@ section{padding-block:var(--sp-8)}
     <span class="eyebrow">料金</span>
     <h2>正直な料金です</h2>
     <div class="plans">
-      <div class="plan reveal"><span class="badge">3社限定</span><div class="tag">モニター</div><div class="price">¥4,980<small>/月</small></div><div class="init">制作費 0円</div><ul><li>5ページ+AI受付</li><li>毎月レポート</li><li>実名事例掲載にご協力</li></ul></div>
+      <div class="plan reveal"><span class="badge">第1号募集</span><div class="tag">モニター</div><div class="price">¥4,980<small>/月</small></div><div class="init">制作費 0円</div><ul><li>5ページ+AI受付</li><li>毎月レポート</li><li>実名事例掲載にご協力</li></ul></div>
       <div class="plan feat reveal"><div class="tag">スタンダード</div><div class="price">¥9,800<small>/月</small></div><div class="init">初期 150,000円</div><ul><li>5ページ+AI受付</li><li>毎月レポート・改修</li><li>独自ドメイン</li></ul></div>
       <div class="plan reveal"><div class="tag">プロ</div><div class="price">¥14,800<small>/月</small></div><div class="init">初期 300,000円</div><ul><li>10ページ+予約導線強化</li><li>撮影ディレクション</li><li>優先サポート</li></ul></div>
     </div>
