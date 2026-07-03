@@ -42,10 +42,12 @@ section{padding-block:var(--sp-8)}
 .lead{font-size:clamp(16px,2.4vw,18px);color:var(--c-ink-soft);max-width:var(--w-text)}
 /* header */
 .hdr{position:sticky;top:0;z-index:50;background:color-mix(in srgb,var(--c-bg) 90%,transparent);backdrop-filter:blur(8px);border-block-end:1px solid var(--c-line)}
-.hdr .in{display:flex;align-items:center;justify-content:space-between;min-height:58px}
-.brand{font-family:var(--font-display);font-weight:700;font-size:16px;text-decoration:none;letter-spacing:.03em}
-.brand span{color:var(--c-accent)}
-.hdr .cta{background:var(--c-accent);color:#fff;text-decoration:none;padding:9px 16px;border-radius:6px;font-size:14px;font-weight:700}
+.hdr .in{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:58px}
+.brand{font-family:var(--font-display);font-weight:700;font-size:16px;text-decoration:none;letter-spacing:.03em;white-space:nowrap;min-width:0;overflow:hidden;text-overflow:ellipsis}
+.brand .ac{color:var(--c-accent)}
+.brand .gm{color:var(--c-ink-soft);font-weight:600}
+@media(max-width:400px){.brand .gm{display:none}}
+.hdr .cta{background:var(--c-accent);color:#fff;text-decoration:none;padding:9px 18px;border-radius:6px;font-size:14px;font-weight:700;white-space:nowrap;flex-shrink:0}
 /* hero */
 .hero{background:linear-gradient(160deg,#123f37,#0b2b26);color:#fff;position:relative;overflow:hidden}
 .hero::after{content:"";position:absolute;inset:0;background:radial-gradient(80% 60% at 80% 0%,rgba(127,212,191,.16),transparent 60%)}
@@ -111,8 +113,8 @@ section{padding-block:var(--sp-8)}
 </head>
 <body>
 <header class="hdr"><div class="container in">
-  <a class="brand" href="#top"><span>AI受付</span>付きHP ｜ NEXT GROWTH</a>
-  <a class="cta" href="#contact">無料で相談する</a>
+  <a class="brand" href="#top"><span class="ac">AI受付</span>付きHP<span class="gm"> ｜ NEXT GROWTH</span></a>
+  <a class="cta" href="#contact">無料相談</a>
 </div></header>
 
 <section class="hero" id="top" style="padding:0">
