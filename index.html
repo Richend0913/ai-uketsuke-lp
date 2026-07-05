@@ -2,17 +2,26 @@
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>AI受付付きホームページ制作｜施術中に取り逃した電話を、AIが拾う｜NEXT GROWTH</title>
 <meta name="description" content="予約制の一人店（整体・美容室・ネイル・士業）向け。施術中に出られない電話・営業時間外の問い合わせをAI受付が24時間拾い、店主に通知します。制作・運用はこちらが100%代行。いつでも解約可・違約金なし。">
 <link rel="canonical" href="https://richend0913.github.io/ai-uketsuke-lp/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="AI受付付きホームページ制作｜取り逃した予約を拾う">
 <meta property="og:description" content="施術中の電話・営業時間外の問い合わせをAI受付が24時間対応。制作・運用は100%代行、いつでも解約可。">
+<meta property="og:url" content="https://richend0913.github.io/ai-uketsuke-lp/">
+<meta property="og:image" content="https://richend0913.github.io/ai-uketsuke-lp/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zen+Kaku+Gothic+New:wght@500;700&display=swap" rel="stylesheet">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230e4f43'/%3E%3Ctext x='16' y='22' font-size='15' text-anchor='middle' fill='%23fff' font-family='sans-serif'%3EAI%3C/text%3E%3C/svg%3E">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Service","serviceType":"AI受付付きホームページ制作・運用","provider":{"@type":"Organization","name":"NEXT GROWTH ／ BURNING BROS."},"areaServed":"JP","description":"予約制一人店向けのAI受付付きホームページ制作・運用代行サービス。"}
+{"@context":"https://schema.org","@type":"Service","serviceType":"AI受付付きホームページ制作・運用","provider":{"@type":"Organization","name":"NEXT GROWTH ／ BURNING BROS."},"areaServed":"JP","description":"予約制一人店向けのAI受付付きホームページ制作・運用代行サービス。","offers":{"@type":"AggregateOffer","lowPrice":"4980","highPrice":"14800","priceCurrency":"JPY"}}
 </script>
+<!-- TODO: G-63VB4HT3T2 が実プロパティか要オーナー確認。差し替えはこの1箇所 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-63VB4HT3T2"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-63VB4HT3T2');</script>
 <style>
 :root{
   --c-accent:#0e7c66; --c-accent-ink:#fff; --c-bg:#f6f5f1; --c-surface:#fff;
@@ -25,7 +34,7 @@
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
-body{font-family:var(--font-body);background:var(--c-bg);color:var(--c-ink);font-size:16px;line-height:1.9;letter-spacing:.02em;line-break:strict;overflow-wrap:anywhere;text-wrap:pretty;padding-block-end:60px}
+body{font-family:var(--font-body);background:var(--c-bg);color:var(--c-ink);font-size:16px;line-height:1.9;letter-spacing:.02em;line-break:strict;overflow-wrap:anywhere;text-wrap:pretty;padding-block-end:calc(72px + env(safe-area-inset-bottom))}
 @media(min-width:768px){body{padding-block-end:0}}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
@@ -35,7 +44,7 @@ h3{font-size:clamp(17px,3vw,20px);margin-block-end:var(--sp-1)}
 .ph{display:inline-block}
 p{max-width:var(--w-text)}
 .container{max-width:var(--w-content);margin-inline:auto;padding-inline:20px}
-section{padding-block:var(--sp-8)}
+section{padding-block:var(--sp-8);scroll-margin-top:64px}
 @media(min-width:768px){section{padding-block:var(--sp-12)}}
 .eyebrow{color:var(--c-accent);font-size:12px;letter-spacing:.2em;font-weight:700;display:inline-flex;align-items:center;gap:10px;margin-block-end:var(--sp-2)}
 .eyebrow::before{content:"";width:26px;height:1px;background:currentColor;opacity:.7}
@@ -61,6 +70,8 @@ section{padding-block:var(--sp-8)}
 .btn-primary{background:var(--c-accent);color:#fff}
 .btn-ghost{border-color:#ffffff55;color:#fff}
 .hero .note{margin-block-start:var(--sp-3);font-size:13px;color:#9fc4bb}
+.hero .offer{margin-block-start:var(--sp-3);font-size:15px;color:#eaf5f1;border:1px solid rgba(127,212,191,.45);border-radius:var(--radius);padding:12px 16px;max-width:32em;background:rgba(127,212,191,.08)}
+.hero .offer b{color:#7fd4bf}
 /* problem */
 .prob{display:grid;gap:var(--sp-2);margin-block-start:var(--sp-4)}
 @media(min-width:700px){.prob{grid-template-columns:1fr 1fr 1fr;gap:var(--sp-3)}}
@@ -104,10 +115,12 @@ section{padding-block:var(--sp-8)}
 /* footer + mobile bar */
 .ft{background:#10221e;color:#b7c9c3;font-size:13px;padding-block:var(--sp-6)}
 .ft a{color:inherit}
-.bar{position:fixed;inset-inline:0;bottom:0;z-index:60;display:flex;box-shadow:0 -2px 16px rgba(0 0 0 /.14)}
+.bar{position:fixed;inset-inline:0;bottom:0;z-index:60;display:flex;box-shadow:0 -2px 16px rgba(0 0 0 /.14);padding-bottom:env(safe-area-inset-bottom);background:var(--c-ink)}
 .bar a{flex:1;min-height:56px;display:grid;place-items:center;font-weight:700;font-size:15px;text-decoration:none}
 .bar .l{background:var(--c-ink);color:#fff}.bar .p{background:var(--c-accent);color:#fff}
 @media(min-width:768px){.bar{display:none}}
+/* AI受付widgetのFAB(part="fab")をモバイル固定バーの上へ退避（重なり解消） */
+@media(max-width:767px){body>div::part(fab){bottom:calc(72px + env(safe-area-inset-bottom))}}
 .reveal{opacity:0;transform:translateY(16px);transition:.6s cubic-bezier(.2,.7,.2,1)}.reveal.in{opacity:1;transform:none}
 </style>
 </head>
@@ -120,14 +133,16 @@ section{padding-block:var(--sp-8)}
 <section class="hero" id="top" style="padding:0">
   <div class="container">
     <span class="eyebrow">予約制の一人店オーナーへ</span>
-    <h1><span class="ph">施術中に取り逃した電話を、</span><span class="ph">AIが24時間拾います。</span></h1>
-    <p class="sub">整体・美容室・ネイル・士業など、予約制で一人運営のお店向け。営業時間外や施術中の「予約したかったのに」を、AI受付付きのホームページが取りこぼしません。制作も毎月の運用も、こちらが100%代行します。</p>
+    <h1><span class="ph">施術中に取り逃した</span><span class="ph">電話を、</span><span class="ph">AIが24時間拾います。</span></h1>
+    <p class="sub">整体・美容室・ネイル・士業など、予約制で一人運営のお店向け。営業時間外や施術中の「予約したかったのに」を、AI受付付きのホームページが24時間拾って店主に届けます。制作も毎月の運用も、こちらが100%代行します。</p>
     <div class="btns">
       <a class="btn btn-primary" href="#demo">実際のデモを触る</a>
       <a class="btn btn-ghost" href="#price">料金を見る</a>
     </div>
-    <p class="note">初期0円のモニター枠あり ／ いつでも解約可・違約金なし ／ ドメインはお店の名義</p>
-    <p class="note" style="margin-block-start:6px;color:#9fc4bb">運営：山口県岩国市の NEXT GROWTH ／ BURNING BROS.。実際に事業（軽貨物運送）を営みながら、AIで自分たちの現場を軽くしてきた当事者がつくります。</p>
+    <p class="offer"><b>LINEで店名と業種を送るだけ</b>で、あなたのお店版デモを無料でお作りします。</p>
+    <p class="note">このページの右下で、今すぐ本物のAI受付を試せます。</p>
+    <p class="note" style="margin-block-start:6px">初期0円のモニター枠あり ／ いつでも解約可・違約金なし ／ ドメインはお店の名義</p>
+    <p class="note" style="margin-block-start:6px;color:#9fc4bb">運営：NEXT GROWTH ／ BURNING BROS.（山口県岩国市）。実際に事業（軽貨物運送）を営みながら、AIで自分たちの現場を軽くしてきた当事者がつくります。</p>
   </div>
 </section>
 
@@ -159,13 +174,13 @@ section{padding-block:var(--sp-8)}
 <section id="demo" class="demos">
   <div class="container">
     <span class="eyebrow">まず触ってみてください</span>
-    <h2><span class="ph">業種別の実物デモ</span><span class="ph">（右下のAI受付に話しかけられます）</span></h2>
-    <p class="lead">下は当社が制作したサンプルです（架空店）。営業時間や料金を、右下のAI受付に聞いてみてください。</p>
+    <h2><span class="ph">業種別の実物デモ</span></h2>
+    <p class="lead">右下のAI受付に話しかけられます。下は当社が制作したサンプルです（架空店）。営業時間や料金を、AI受付に聞いてみてください。</p>
     <div class="demo-grid">
-      <a class="demo" href="https://demo-hairsalon.pages.dev/" target="_blank" rel="noopener"><span><b>美容室</b><small>hair atelier 凪</small></span><span class="go">触る →</span></a>
-      <a class="demo" href="https://ai-uketsuke-demo.pages.dev/" target="_blank" rel="noopener"><span><b>整体院</b><small>やすらぎ整体院</small></span><span class="go">触る →</span></a>
-      <a class="demo" href="https://richend0913.github.io/nail-salon/" target="_blank" rel="noopener"><span><b>ネイルサロン</b><small>Lumière Nail</small></span><span class="go">触る →</span></a>
-      <a class="demo" href="https://richend0913.github.io/ramen-ai/" target="_blank" rel="noopener"><span><b>飲食店</b><small>らぁ麺 玄（AI店員）</small></span><span class="go">触る →</span></a>
+      <a class="demo" href="https://demo-hairsalon.pages.dev/?utm_source=lp&amp;utm_medium=referral" target="_blank" rel="noopener" onclick="gtag('event','generate_lead',{method:'demo'})"><span><b>美容室</b><small>hair atelier 凪</small></span><span class="go">触る →</span></a>
+      <a class="demo" href="https://ai-uketsuke-demo.pages.dev/?utm_source=lp&amp;utm_medium=referral" target="_blank" rel="noopener" onclick="gtag('event','generate_lead',{method:'demo'})"><span><b>整体院</b><small>やすらぎ整体院</small></span><span class="go">触る →</span></a>
+      <a class="demo" href="https://richend0913.github.io/nail-salon/?utm_source=lp&amp;utm_medium=referral" target="_blank" rel="noopener" onclick="gtag('event','generate_lead',{method:'demo'})"><span><b>ネイルサロン</b><small>Lumière Nail</small></span><span class="go">触る →</span></a>
+      <a class="demo" href="https://richend0913.github.io/ramen-ai/?utm_source=lp&amp;utm_medium=referral" target="_blank" rel="noopener" onclick="gtag('event','generate_lead',{method:'demo'})"><span><b>飲食店</b><small>らぁ麺 玄（AI店員）</small></span><span class="go">触る →</span></a>
     </div>
   </div>
 </section>
@@ -175,9 +190,9 @@ section{padding-block:var(--sp-8)}
     <span class="eyebrow">料金</span>
     <h2>正直な料金です</h2>
     <div class="plans">
-      <div class="plan reveal"><span class="badge">第1号募集</span><div class="tag">モニター</div><div class="price">¥4,980<small>/月</small></div><div class="init">制作費 0円</div><ul><li>5ページ+AI受付</li><li>毎月レポート</li><li>実名事例掲載にご協力</li></ul></div>
-      <div class="plan feat reveal"><div class="tag">スタンダード</div><div class="price">¥9,800<small>/月</small></div><div class="init">初期 150,000円</div><ul><li>5ページ+AI受付</li><li>毎月レポート・改修</li><li>独自ドメイン</li></ul></div>
-      <div class="plan reveal"><div class="tag">プロ</div><div class="price">¥14,800<small>/月</small></div><div class="init">初期 300,000円</div><ul><li>10ページ+予約導線強化</li><li>撮影ディレクション</li><li>優先サポート</li></ul></div>
+      <div class="plan reveal"><span class="badge">第1号募集</span><div class="tag">モニター</div><div class="price">¥4,980<small>/月（税込）</small></div><div class="init">制作費 0円<br>※モニター1店舗・成約次第終了</div><ul><li>5ページ+AI受付</li><li>毎月レポート</li><li>実名事例掲載にご協力</li></ul></div>
+      <div class="plan feat reveal"><div class="tag">スタンダード</div><div class="price">¥9,800<small>/月（税込）</small></div><div class="init">初期 150,000円（税込）</div><ul><li>5ページ+AI受付</li><li>毎月レポート・改修</li><li>独自ドメイン</li></ul></div>
+      <div class="plan reveal"><div class="tag">プロ</div><div class="price">¥14,800<small>/月（税込）</small></div><div class="init">初期 300,000円（税込）</div><ul><li>10ページ+予約導線強化</li><li>撮影ディレクション</li><li>優先サポート</li></ul></div>
     </div>
     <div class="honest">
       <b>正直にお伝えします。</b> いつでも解約でき、違約金はありません。ドメインはお店の名義でお渡しします。データはお店のものです。
@@ -186,14 +201,14 @@ section{padding-block:var(--sp-8)}
   </div>
 </section>
 
-<section id="contact" class="cta-sec" style="scroll-margin-top:60px">
+<section id="contact" class="cta-sec">
   <div class="container">
     <span class="eyebrow" style="color:#7fd4bf">お問い合わせ</span>
     <h2><span class="ph">まずは無料相談から。</span></h2>
-    <p class="lead">「うちの店だとどうなる？」を、実際のデモをお見せしながらご説明します。しつこい営業はしません。</p>
+    <p class="lead">「うちの店だとどうなる？」を、実際のデモをお見せしながらご説明します。LINEで店名と業種を送るだけで、あなたのお店版デモを無料でお作りします。しつこい営業はしません。</p>
     <div class="btns">
-      <a class="btn btn-primary" href="https://lin.ee/8rR88pb" target="_blank" rel="noopener">LINEで相談する</a>
-      <a class="btn btn-ghost" href="mailto:next.growth0913@gmail.com">メールで相談する</a>
+      <a class="btn btn-primary" href="https://lin.ee/8rR88pb" target="_blank" rel="noopener" onclick="gtag('event','generate_lead',{method:'line'})">LINEで相談する</a>
+      <a class="btn btn-ghost" href="mailto:next.growth0913@gmail.com" onclick="gtag('event','generate_lead',{method:'mail'})">メールで相談する</a>
     </div>
   </div>
 </section>
@@ -201,10 +216,17 @@ section{padding-block:var(--sp-8)}
 <footer class="ft"><div class="container">
   <p>AI受付付きホームページ制作・運用 ／ 制作：NEXT GROWTH ／ BURNING BROS.</p>
   <p style="margin-block-start:8px;color:#8aa39c">掲載のデモはすべて架空の店舗です。実際の制作ではお店の情報・写真に差し替えます。</p>
+  <div style="margin-block-start:16px;padding-block-start:16px;border-block-start:1px solid #24403a">
+    <p style="font-weight:700;color:#dcebe6">運営者情報</p>
+    <p>屋号：NEXT GROWTH ／ BURNING BROS.</p>
+    <p>所在地：山口県岩国市</p>
+    <p>連絡先：<a href="https://lin.ee/8rR88pb" target="_blank" rel="noopener">LINE</a> ／ <a href="mailto:next.growth0913@gmail.com">next.growth0913@gmail.com</a></p>
+    <p>実業として軽貨物運送業を営む当事者が、制作から毎月の運用まで担当します。</p>
+  </div>
 </div></footer>
 
 <div class="bar">
-  <a class="l" href="https://lin.ee/8rR88pb" target="_blank" rel="noopener">LINEで相談</a>
+  <a class="l" href="https://lin.ee/8rR88pb" target="_blank" rel="noopener" onclick="gtag('event','generate_lead',{method:'line'})">LINEで相談</a>
   <a class="p" href="#demo">デモを触る</a>
 </div>
 
@@ -212,5 +234,6 @@ section{padding-block:var(--sp-8)}
 const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.14});
 document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
 </script>
+<script src="https://demo-hairsalon.pages.dev/widget.js" data-site="ai-uketsuke-lp" data-endpoint="https://genba-ai-core.burningbros.workers.dev" data-name="AI受付（この画面が商品です）" data-accent="#0e7c66" defer></script>
 </body>
 </html>
